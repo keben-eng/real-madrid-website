@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import PlayersCount from "./components/playersCount";
+import MostGoals from "./components/mostGoals";
+import Players from "./components/Players";
+import CustomTodo from "./components/customTodo";
+import Counter1 from "./components/counter1";
+import TodoList from "./components/todoList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {/*<Players/>*/}
+        {/*<PlayersCount/>*/}
+        {/*<MostGoals/>*/}
+        <CustomTodo/>
+        {/*<Counter1/>*/}
+        {/*<TodoList isBoolean = {true}/>*/}
     </div>
   );
 }
-
 export default App;

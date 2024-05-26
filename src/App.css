@@ -1,38 +1,183 @@
-.App {
+body {
+  font-family: "BMW Helvetica 75", serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #c6ceff;
+}
+.cardsBackground {
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 9px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.playersCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 240px;
+  background-color: orange;
+  border-radius: 4px;
+  margin: 4px;
   text-align: center;
+  color: white;
+  padding: 2px;
+  transition-duration: 1.5s;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 600px) {
+  .cardsBackground {
+    flex-direction: column;
+    align-items: center;
+  }
+  .playersCard {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+.goalsAndMatches {
+  left: 1px;
+  position: absolute;
+  padding: 2px;
+  border-radius: 2px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.position {
+  top: 0;
+  width: 28px;
+  background-color: rgb(2, 2, 43);
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 2px;
+}
+
+.totalMatches {
+  margin-left: 3px;
+  background-color: green;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 2px;
+  width: 26px;
+}
+
+.totalGoals {
+  margin-left: 3px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 2px;
+  width: 26px;
+}
+
+.shirtNumber {
+  position: absolute;
+  left: 174px;
+  top: 1.5px;
+  background-color: rgb(2, 2, 43);
+  width: 26px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.playerInfo {
+  margin-top: 175px;
+  color: rgb(2, 2, 43);
+  font-weight: bold;
+  font-family: Bahnschrift, serif;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.playerPicture {
+  position: absolute;
+  height: 155px;
+  width: 140px;
+  top: 10px;
+  margin-left: 13px;
+}
+
+
+.todo {
+  background-color: orange;
+  margin-top: 6px;
+  border-radius: 4px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.inputAndButton {
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addButton {
+  cursor: pointer;
+  margin-left: 452px;
+  border-radius: 4px;
+  border: none;
+  height: 16px
+}
+
+.like {
+  width: 24px;
+  height: 24px;
+  margin-top: 142px;
+  background-image: url("assets/heart-solid.svg");
+}
+
+
+
+.dislike {
+  width: 24px;
+  height: 24px;
+  margin-top: 142px;
+  background-image: url("assets/heart-regular.svg");
+}
+
+.dislike:hover {
+  background-image: url("assets/heart-solid.svg");
+  transition-duration: 0.5s;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: orange;
+  margin: 2px;
+}
+
+.container {
+  border-radius: 4px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  background-color: #0b0d33;
+}
+
+.editDelete {
+  color: white;
+}
+
+.todos {
+  color: white;
+  display: flex;
+  align-items: center;
+  left: 1px;
+}
+
+.flag {
+  height: 20px;
+  width: 30px;
+  margin-top: 4px;
+}
+
+.headingDiv {
+  text-align: center;
+  background-color: orange;
+  border-radius: 4px;
 }
