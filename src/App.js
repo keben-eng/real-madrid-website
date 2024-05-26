@@ -1,20 +1,22 @@
 import './App.css';
-import PlayersCount from "./components/playersCount";
-import MostGoals from "./components/mostGoals";
-import Players from "./components/Players";
-import CustomTodo from "./components/customTodo";
-import Counter1 from "./components/counter1";
-import TodoList from "./components/todoList";
+
+import Counter from "./components/Counter";
+import {useState} from "react";
 
 function App() {
+    const [isReset, setIsReset] = useState(false)
+
+    const handleButton = () => {
+        setIsReset(true)
+    }
+
+
   return (
+
     <div className="App">
-        {/*<Players/>*/}
-        {/*<PlayersCount/>*/}
-        {/*<MostGoals/>*/}
-        <CustomTodo/>
-        {/*<Counter1/>*/}
-        {/*<TodoList isBoolean = {true}/>*/}
+        <Counter resetCounter={isReset} teamName='Kakachikner'/>
+        <Counter resetCounter={isReset} teamName='Vardikner'/>
+        <button onClick={handleButton}>Reset All</button>
     </div>
   );
 }
